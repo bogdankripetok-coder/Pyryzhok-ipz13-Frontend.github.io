@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демонстрація CSS селекторів</title>
+    <style>
+      
+        h1, h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+       
+        * {
+            box-sizing: border-box;
+        }
+
+        
+        li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+       
+        #container > ul {
+            border: 2px solid #000aff;
+            padding: 20px;
+            list-style-type: none;
+        }
+        h3 + p {
+            color: red;
+            font-weight: bold;
+        }
+
+        h3 ~ span {
+            color: green;
+            display: block; 
+            margin-left: 20px;
+        }
+
+    
+        a[href^="http"] {
+            color: #ffde00; 
+            background-color: #333;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #000aff;
+            color: white;
+            cursor: pointer;
+        }
+
+        body { padding: 20px; }
+        .section { margin-bottom: 30px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+        button { padding: 10px 20px; border: 1px solid #000aff; background: white; transition: 0.3s; }
+    </style>
+</head>
+<body>
+
+    <h1>Приклад заголовка H1</h1>
+    <h2>Приклад заголовка H2 (той же шрифт завдяки групуванню)</h2>
+
+    <div class="section">
+        <h3>Тест сусідніх елементів</h3>
+        <p>Цей абзац червоний, бо він йде відразу після h3 (h3 + p).</p>
+        
+        <p>Цей абзац звичайний.</p>
+
+        <span>Це span (h3 ~ span) - зелений.</span>
+        <span>Ще один span (h3 ~ span) - теж зелений.</span>
+    </div>
+
+    <div id="container" class="section">
+        <h3>Тест дочірніх елементів та нащадків</h3>
+        <p>Синя рамка тільки у зовнішнього списку (id="container" > ul).</p>
+        
+        <ul>
+            <li>Елемент списку 1
+                <ul>
+                    <li><a href="#">Внутрішнє посилання (без підкреслення)</a></li>
+                </ul>
+            </li>
+            <li>Елемент списку 2</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>Тест атрибутів та ховера</h3>
+        
+        <p>
+            <a href="http://google.com">Зовнішнє посилання (Золоте)</a> <br><br>
+            <a href="/local-page">Локальне посилання (Звичайне)</a>
+        </p>
+
+        <button>Наведи на мене мишку!</button>
+    </div>
+<a style="display: block; text-align: right" href="../lab1.html">На головну</a>
+</body>
+</html>
