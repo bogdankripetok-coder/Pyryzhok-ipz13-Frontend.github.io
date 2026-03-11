@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мої одногрупники</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        /* Стилі для таблиці згідно з вимогами */
+        table {
+            width: 100%; /* Ширина на всю сторінку */
+            border-collapse: collapse;
+            background-color: #1e1e1e; /* Темний фон, як на скріншоті */
+            color: white;
+            text-align: center;
+        }
+        th, td {
+            border: 1px solid #ccc; /* Стиль границь */
+            padding: 10px;
+        }
+        th {
+            font-size: 1.2em;
+        }
+        /* Розмір фото: 4х3 см (прибл. 151x113 пікселів для екрану) */
+        .student-photo {
+            width: 151px;
+            height: 113px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .student-link {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .student-link:hover {
+            color: #4CAF50;
+        }
+        /* Стиль для iframe */
+        iframe {
+            width: 100%;
+            height: 150px;
+            border: none;
+            background-color: #2a2a2a;
+        }
+        /* Стилі для медіа-блоку під таблицею */
+        .media-section {
+            margin-top: 30px;
+            padding: 15px;
+            background: white;
+            border: 1px solid #ccc;
+            color: black;
+        }
+        .download-link {
+            display: block;
+            margin-top: 10px;
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th colspan="4">
+                <img src="05.gif" alt="Анімація" style="height: 120px; vertical-align: middle; margin-right: 15px;">
+                Мої одногрупники
+            </th>
+        </tr>
+        
+        <tr>
+            <td>
+                <a href="bio1.html" target="bio_frame" class="student-link">
+                    <img src="photo/1.jpg" alt="Студент 1" class="student-photo"><br>
+                    Мацета
+                </a>
+            </td>
+            <td>
+                <a href="bio2.html" target="bio_frame" class="student-link">
+                    <img src="photo/2.jpg" alt="Студент 2" class="student-photo"><br>
+                    Павлюк
+                </a>
+            </td>
+            <td>
+                <a href="bio3.html" target="bio_frame" class="student-link">
+                    <img src="photo/3.jpg" alt="Студент 3" class="student-photo"><br>
+                   Павлюк
+                </a>
+            </td>
+            <td>
+                <a href="bio4.html" target="bio_frame" class="student-link">
+                    <img src="photo/4.jpg" alt="Студент 4" class="student-photo"><br>
+                    Назарук
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="4" style="padding: 0;">
+                <iframe name="bio_frame" src="default_bio.html"></iframe>
+            </td>
+        </tr>
+    </table>
+
+    <div class="media-section">
+        <h3>Медіафайли</h3>
+        
+        <div>
+            <p>Улюблена пісня:</p>
+            <audio controls>
+                <source src="Rick_Astley_-_Never_Gonna_Give_You_Up_Original_(SkySound.cc).mp3" type="audio/mpeg">
+                Ваш браузер не підтримує аудіо елемент.
+            </audio>
+            <a href="Rick_Astley_-_Never_Gonna_Give_You_Up_Original_(SkySound.cc).mp3" download class="download-link">Завантажити аудіо (MP3)</a>
+        </div>
+
+        <hr style="margin: 20px 0;">
+
+        <div>
+            <p>Відеопрезентація:</p>
+            <video controls width="400">
+                <source src="videoplayback.mp4" type="video/mp4">
+                Ваш браузер не підтримує відео елемент.
+            </video>
+            <a href="videoplayback.mp4" download class="download-link">Завантажити відео (MP4)</a>
+        </div>
+    </div>
+
+</body>
+</html>
