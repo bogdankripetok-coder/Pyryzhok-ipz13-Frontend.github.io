@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Властивість Float</title>
+    <style>
+        .float-left {
+            float: left;
+            width: 150px;
+            height: 100px;
+            background-color: #ffab91;
+            margin: 10px 15px 10px 0;
+            text-align: center;
+            line-height: 100px;
+            border: 2px solid #d84315;
+        }
+        .float-right {
+            float: right;
+            width: 150px;
+            height: 100px;
+            background-color: #81d4fa;
+            margin: 10px 0 10px 15px;
+            text-align: center;
+            line-height: 100px;
+            border: 2px solid #0277bd;
+        }
+        p { font-size: 18px; text-align: justify; }
+    </style>
+</head>
+<body>
+    <h2>Властивість Float</h2>
+    
+    <div class="float-left">Float: Left</div>
+    <p>Цей текст обтікає лівий плаваючий блок справа. Властивість float часто використовується для розміщення зображень у тексті, щоб текст гарно огинав картинку, а не розривався. Текст продовжує обтікати елемент, поки не закінчиться висота плаваючого блоку.</p>
+    
+    <div class="float-right">Float: Right</div>
+    <p>А цей текст обтікає правий блок. Блок притискається до правого краю батьківського контейнера, а весь наступний контент (текст) змушений розташовуватися ліворуч від нього. Це базовий механізм верстки, який використовувався до появи Flexbox та Grid.</p>
+</body>
+</html>

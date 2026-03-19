@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Властивість Clear</title>
+    <style>
+        .floated {
+            float: left;
+            width: 200px;
+            height: 80px;
+            background-color: #ce93d8;
+            margin: 10px 20px 10px 0;
+            padding: 10px;
+        }
+        .no-clear {
+            background-color: #eeeeee;
+            padding: 10px;
+            border: 2px dashed grey;
+        }
+        .with-clear {
+            clear: both;
+            background-color: #a5d6a7;
+            padding: 10px;
+            border: 2px solid green;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Властивість Clear</h2>
+    
+    <div class="floated">Плаваючий блок (float: left)</div>
+    
+    <div class="no-clear">
+        <strong>БЕЗ властивості clear:</strong> Цей блок ігнорує межі плаваючого блоку і "наповзає" на його територію, обтікаючи його.
+    </div>
+    
+    <div class="with-clear">
+        <strong>З властивістю clear: both:</strong> Цей блок забороняє обтікання з обох боків. Він автоматично опускається нижче всіх плаваючих елементів.
+    </div>
+</body>
+</html>

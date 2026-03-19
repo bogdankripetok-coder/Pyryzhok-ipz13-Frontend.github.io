@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Властивість Z-index</title>
+    <style>
+        .layer {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+        
+        .box1 {
+            background-color: #f44336; /* Червоний */
+            top: 80px;
+            left: 50px;
+            z-index: 1; /* Найнижчий шар */
+        }
+        
+        .box2 {
+            background-color: #4caf50; /* Зелений */
+            top: 120px;
+            left: 100px;
+            z-index: 3; /* Найвищий шар, перекриє всіх */
+        }
+        
+        .box3 {
+            background-color: #2196f3; /* Синій */
+            top: 160px;
+            left: 150px;
+            z-index: 2; /* Середній шар */
+        }
+    </style>
+</head>
+<body>
+    <h2>Властивість Z-index</h2>
+    <p>Елементи позиційовані абсолютно. Зверніть увагу на їх порядок перекриття.</p>
+    
+    <div class="layer box1">z-index: 1 (Знизу)</div>
+    <div class="layer box2">z-index: 3 (Зверху всіх!)</div>
+    <div class="layer box3">z-index: 2 (Посередині)</div>
+    
+</body>
+</html>
