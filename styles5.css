@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+q.review {
+    quotes: "«" "»" "‹" "›";
+    font-style: italic;
+    color: #555;
+}
+
+q.review::before {
+    content: open-quote;
+}
+
+q.review::after {
+    content: close-quote;
+}
+
+.product-card[data-category]::before {
+    content: "\2728 Категорія: " attr(data-category) " \2728"; 
+    display: block;
+    background-color: #ffeaa7;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.site-header {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.site-footer {
+    background: radial-gradient(circle, #ffecd2 0%, #fcb69f 100%);
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 10px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    outline: 2px dashed transparent;
+    transition: outline 0.3s;
+}
+
+.main-nav a:hover {
+    outline: 2px dashed #fbc2eb;
+}
+
+.section-title {
+    text-align: center;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #a18cd1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.product-card {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 5px solid;
+    border-image: linear-gradient(45deg, #fbc2eb, #a6c1ee) 1;
+}
+
+.resizable-box {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e0f7fa;
+    border: 1px solid #0097a7;
+    resize: both; 
+    overflow: auto;
+    width: 250px;
+    height: 80px;
+}
+
+textarea {
+    width: 100%;
+    height: 60px;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    caret-color: #ff0000; 
+    border: 1px solid #ccc;
+}
+
+.promo-sidebar {
+    margin: 30px auto;
+    width: 60%;
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    cursor: help;
+    border: 15px solid transparent; 
+    border-image-source: url('https://www.w3.org/TR/css-backgrounds-3/border.png'); 
+    border-image-width: 15px;  
+    border-image-slice: 27;    
+    border-image-repeat: round; 
+    border-image-outset: 5px;   
+}
+
+.img-placeholder {
+    width: 100px;
+    height: 100px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+mark {
+    background-color: #ffcccb;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+address {
+    font-style: normal;
+    line-height: 1.5;
+    margin-top: 10px;
+}
