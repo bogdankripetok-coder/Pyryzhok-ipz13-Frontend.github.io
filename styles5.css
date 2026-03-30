@@ -20,7 +20,7 @@ q.review::after {
 }
 
 .product-card[data-category]::before {
-    content: "\2728 Категорія: " attr(data-category) " \2728"; 
+    content: " Категорія: " attr(data-category) ; 
     display: block;
     background-color: #ffeaa7;
     padding: 5px;
