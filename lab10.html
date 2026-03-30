@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інтернет-магазин взуття "Step&Go"</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Step&Go</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Головна</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Каталог взуття
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Чоловіче</a></li>
+                            <li><a class="dropdown-item" href="#">Жіноче</a></li>
+                            <li><a class="dropdown-item" href="#">Дитяче</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Про нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Контакти</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container mt-4">
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner rounded">
+                <div class="carousel-item active">
+                    <img src="shoes1.jpg" class="d-block w-100" alt="Слайд 1">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                        <h5>Нова осіння колекція</h5>
+                        <p>Зустрічайте стильні черевики для будь-якої погоди.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="shoes2.jpg" class="d-block w-100" alt="Слайд 2">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                        <h5>Спортивне взуття</h5>
+                        <p>Кросівки для бігу та активного відпочинку.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="shoes3.webp" class="d-block w-100" alt="Слайд 3">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                        <h5>Елегантна класика</h5>
+                        <p>Туфлі, що підкреслять ваш неперевершений стиль.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Попередній</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Наступний</span>
+            </button>
+        </div>
+    </header>
+
+    <section class="container mt-5">
+        <h2 class="text-center mb-4">Чому обирають нас?</h2>
+        <div class="row g-4 text-center">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="p-4 border rounded bg-light h-100">
+                    <h4 class="text-primary">Якість</h4>
+                    <p>Ми співпрацюємо лише з перевіреними світовими брендами. Ваше взуття прослужить роками.</p>
+                    <button class="btn btn-outline-primary">Дізнатися більше</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="p-4 border rounded bg-light h-100">
+                    <h4 class="text-success">Доставка</h4>
+                    <p>Швидка та безкоштовна доставка по всій території України при замовленні від 2000 грн.</p>
+                    <button class="btn btn-success">Умови доставки</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="p-4 border rounded bg-light h-100">
+                    <h4 class="text-danger">Ціни</h4>
+                    <p>Регулярні акції, знижки до -50% на минулі колекції та програма лояльності для постійних клієнтів.</p>
+                    <button class="btn btn-danger">Акції</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mt-5 mb-5">
+        <h2 class="text-center mb-4">Популярні моделі</h2>
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100">
+                    <img src="shoes4.jpg" class="card-img-top" alt="Кросівки">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Кросівки Nike Air</h5>
+                        <p class="card-text">Ідеальний вибір для щоденних прогулянок та спорту. Легка підошва.</p>
+                        <a href="#" class="btn btn-primary mt-auto">Купити за 2500₴</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100">
+                    <img src="shoes5.jpg" class="card-img-top" alt="Черевики">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Шкіряні черевики</h5>
+                        <p class="card-text">Надійний захист від вологи та холоду. Натуральна шкіра.</p>
+                        <a href="#" class="btn btn-dark mt-auto">Купити за 3200₴</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100">
+                    <img src="shoes6.jpg" class="card-img-top" alt="Туфлі">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Класичні туфлі</h5>
+                        <p class="card-text">Елегантність та комфорт в одному флаконі. Для офісу та свят.</p>
+                        <a href="#" class="btn btn-warning mt-auto">Купити за 1800₴</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100">
+                    <img src="shoes7.jpg" class="card-img-top" alt="Сандалі">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Літні сандалі</h5>
+                        <p class="card-text">Зручне літнє взуття з дихаючих матеріалів для спекотних днів.</p>
+                        <a href="#" class="btn btn-info mt-auto text-white">Купити за 950₴</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2026 Інтернет-магазин "Step&Go". Всі права захищено.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
