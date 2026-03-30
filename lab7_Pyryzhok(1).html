@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 7 - Варіант 8</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .main-container {
+            width: 600px;
+            height: 700px;
+            margin: 0 auto;
+            background-color: white;
+            border: 2px solid #000;
+            box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.4);
+            
+            padding: 0 50px; 
+            box-sizing: border-box;
+        }
+
+    
+        .grid-wrapper {
+            width: 100%;
+            height: 100%;
+            border-left: 2px solid #000;
+            border-right: 2px solid #000;
+            box-sizing: border-box;
+            font-size: 0; 
+        }
+
+        
+        .block {
+            box-sizing: border-box;
+            border: 2px solid #000;
+            font-size: 18px; 
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        
+        .block-1 {
+            width: 100%;
+            height: 15%;
+            background-color: #2962ff; 
+            color: white;
+            display: inline-block;
+        }
+
+        .middle-row {
+            width: 100%;
+            height: 70%;
+            display: block; 
+        }
+        .block-2 {
+            width: 30%;
+            height: 100%;
+            background-color: #ffca28; 
+            display: inline-block; 
+            vertical-align: top;
+        }
+        
+        .right-column {
+            width: 70%;
+            height: 100%;
+            display: inline-block; 
+            vertical-align: top;
+            font-size: 0;
+        }
+        
+        .block-5 {
+            width: 100%;
+            height: 25%;
+            background-color: #ffca28; 
+            
+            transform: rotate(-3deg); 
+            transform-origin: center;
+            position: relative;
+            z-index: 10;
+        }
+        .block-4 {
+            width: 100%;
+            height: 75%;
+            background-color: #ffffff;
+            overflow-y: auto; 
+            font-weight: normal;
+        }
+        .block-3 {
+            width: 100%;
+            height: 15%;
+            background-color: #2962ff; 
+            color: white;
+            display: inline-block;
+        }
+        .number {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="grid-wrapper">
+            
+            <div class="block block-1">
+                <span class="number">1</span> 
+                Спецсимвол: &starf; </div>
+            
+            <div class="middle-row">
+                
+                <div class="block block-2">
+                    <span class="number">2</span>
+                </div>
+                
+                <div class="right-column">
+                    <div class="block block-5">
+                        <span class="number">5</span>
+                        Спецсимвол: &spades; </div>
+                    
+                    <div class="block block-4">
+                        <span class="number">4</span> 
+                        <strong></strong><br><br>
+                        Спецсимвол: &infin; <br><br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>
+                        Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida.<br><br>
+                        Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi.
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="block block-3">
+                <span class="number">3</span>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
