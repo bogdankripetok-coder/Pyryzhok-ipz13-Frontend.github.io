@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 11 - Веб-форми та Псевдокласи</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h2 { color: #2962ff; border-bottom: 2px solid #2962ff; padding-bottom: 5px; }
+        
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            padding: 15px;
+        }
+        legend { font-weight: bold; color: #555; }
+        .form-group { margin-bottom: 10px; }
+        label { display: inline-block; width: 150px; font-weight: bold; }
+        input[type="text"], input[type="password"], input[type="email"], input[type="number"], textarea, select {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 200px;
+        }
+        textarea { width: 300px; resize: vertical; }
+
+        .task2-text::first-letter {
+            font-size: 2.5em;
+            color: #d32f2f;
+            font-weight: bold;
+            float: left;
+            margin-right: 5px;
+            line-height: 1;
+        }
+        .task2-text::first-line {
+            font-weight: bold;
+            color: #1565c0;
+        }
+        .task2-box::before {
+            content: "🌟 Увага: ";
+            color: #f57f17;
+            font-weight: bold;
+        }
+        .task2-box::after {
+            content: " 🌟";
+            color: #f57f17;
+        }
+
+        a.custom-link:link {
+            color: #2962ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a.custom-link:visited {
+            color: #7b1fa2;
+        }
+        a.custom-link:hover {
+            color: #ff3d00;
+            text-decoration: underline;
+        }
+        a.custom-link:active {
+            color: #00e676;
+        }
+
+        .task4-container input {
+            transition: all 0.3s;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .task4-container input[type="email"]:valid,
+        .task4-container input[type="text"]:valid {
+            border: 2px solid #4caf50;
+            background-color: #e8f5e9;
+        }
+        .task4-container input[type="email"]:invalid {
+            border: 2px solid #f44336;
+            background-color: #ffebee;
+        }
+
+        .task4-container input[type="number"]:in-range {
+            border: 2px solid #2196f3;
+            background-color: #e3f2fd;
+        }
+        .task4-container input[type="number"]:out-of-range {
+            border: 2px solid #ff9800;
+            background-color: #fff3e0;
+        }
+
+        .task4-container input:optional {
+            border-style: dashed;
+        }
+
+        .task4-container input:enabled {
+            opacity: 1;
+        }
+        .task4-container input:disabled {
+            opacity: 0.5;
+            background-color: #e0e0e0;
+            cursor: not-allowed;
+            border: 1px solid #9e9e9e;
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <h2>Завдання 1: Елементи форми</h2>
+        <form action="#" method="post">
+            
+            <fieldset>
+                <legend>Особисті дані (Текст, Пароль, Email)</legend>
+                <div class="form-group">
+                    <label for="username">Ім'я користувача:</label>
+                    <input type="text" id="username" name="username" placeholder="Введіть ім'я" required autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="userpass">Пароль:</label>
+                    <input type="password" id="userpass" name="userpass" placeholder="Мінімум 6 символів" minlength="6" required>
+                </div>
+                <div class="form-group">
+                    <label for="useremail">Email:</label>
+                    <input type="email" id="useremail" name="useremail" placeholder="example@mail.com">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Налаштування (Range, Radio, Checkbox)</legend>
+                
+                <div class="form-group">
+                    <label for="volume">Гучність (range):</label>
+                    <input type="range" id="volume" name="volume" min="0" max="100" value="50" step="10">
+                </div>
+
+                <div class="form-group">
+                    <label>Стать (Radio група 1):</label>
+                    <input type="radio" id="male" name="gender" value="male" checked>
+                    <label for="male" style="width:auto; font-weight:normal;">Чоловіча</label>
+                    
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female" style="width:auto; font-weight:normal;">Жіноча</label>
+                </div>
+
+                <div class="form-group">
+                    <label>Підписка (Radio група 2):</label>
+                    <input type="radio" id="sub_yes" name="subscription" value="yes">
+                    <label for="sub_yes" style="width:auto; font-weight:normal;">Так</label>
+                    
+                    <input type="radio" id="sub_no" name="subscription" value="no" checked>
+                    <label for="sub_no" style="width:auto; font-weight:normal;">Ні</label>
+                </div>
+
+                <div class="form-group">
+                    <label>Хобі (Checkboxes):</label>
+                    <input type="checkbox" id="hobby1" name="hobbies" value="reading">
+                    <label for="hobby1" style="width:auto; font-weight:normal;">Читання</label>
+                    
+                    <input type="checkbox" id="hobby2" name="hobbies" value="sports">
+                    <label for="hobby2" style="width:auto; font-weight:normal;">Спорт</label>
+                    
+                    <input type="checkbox" id="hobby3" name="hobbies" value="music" checked>
+                    <label for="hobby3" style="width:auto; font-weight:normal;">Музика</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Додаткова інформація (Select, Textarea)</legend>
+                
+                <div class="form-group">
+                    <label for="city">Ваше місто (optgroup):</label>
+                    <select id="city" name="city">
+                        <option value="">-- Оберіть місто --</option>
+                        <optgroup label="Західна Україна">
+                            <option value="lviv">Львів</option>
+                            <option value="ternopil">Тернопіль</option>
+                        </optgroup>
+                        <optgroup label="Центральна Україна">
+                            <option value="kyiv" selected>Київ</option>
+                            <option value="vinnytsia">Вінниця</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="skills">Навички (multiple):</label>
+                    <select id="skills" name="skills[]" multiple size="4">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="js">JavaScript</option>
+                        <option value="php">PHP</option>
+                        <option value="sql">SQL</option>
+                    </select>
+                    <small style="display:block; margin-left:155px; color:#666;">(Затисніть Ctrl або Cmd для множинного вибору)</small>
+                </div>
+
+                <div class="form-group" style="vertical-align: top;">
+                    <label for="comments" style="vertical-align: top;">Ваш коментар:</label>
+                    <textarea id="comments" name="comments" rows="5" placeholder="Напишіть щось тут..."></textarea>
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <button type="submit" style="padding: 10px 20px; background: #4caf50; color: white; border: none; cursor: pointer;">Відправити дані</button>
+                <input type="reset" value="Очистити форму" style="padding: 10px 20px; background: #f44336; color: white; border: none; cursor: pointer;">
+                <input type="button" value="Click me!" onClick='alert("Oh, you have clicked me!!!")' style="padding: 10px 20px; background: #2196f3; color: white; border: none; cursor: pointer;">
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <h2>Завдання 2: Псевдоелементи (::before, ::after, ::first-letter, ::first-line)</h2>
+        <p class="task2-text">Цей абзац демонструє роботу псевдоелементів. Перша літера цього тексту збільшена та пофарбована у червоний колір завдяки ::first-letter. Крім того, весь перший рядок тексту, який ви зараз читаєте, виділений жирним шрифтом та синім кольором завдяки використанню псевдоелементу ::first-line. Як тільки рядок переноситься, стиль повертається до звичайного.</p>
+        
+        <p class="task2-box">Це спеціальний блок тексту. Текст, який ви бачите до та після цього речення, додано виключно через CSS властивість "content" за допомогою ::before та ::after.</p>
+    </section>
+
+    <section>
+        <h2>Завдання 3: Псевдокласи посилань (:link, :visited, :hover, :active)</h2>
+        <p>Наведіть мишку, натисніть та відпустіть, щоб побачити зміну кольорів:</p>
+        <p><a href="https://example.com/page1" target="_blank" class="custom-link">Тестове посилання 1 (Відкриється в новій вкладці)</a></p>
+        <p><a href="#dummy-anchor" class="custom-link">Тестове посилання 2 (Якір на цій же сторінці)</a></p>
+    </section>
+
+    <section class="task4-container">
+        <h2>Завдання 4: Псевдокласи (:valid, :invalid, :in-range, :optional, :enabled)</h2>
+        <p>Спробуйте ввести дані в поля нижче, щоб побачити реакцію CSS (зелена рамка - валідно, червона - невалідно).</p>
+        
+        <label for="test-email">Email (:valid / :invalid):</label>
+        <input type="email" id="test-email" placeholder="Введіть правильний email" required>
+
+        <label for="test-num">Число 1-10 (:in-range):</label>
+        <input type="number" id="test-num" min="1" max="10" value="5">
+        <small style="display:block; margin-bottom: 10px; color:#666;">Введіть число більше 10, щоб рамка стала помаранчевою (:out-of-range)</small>
+
+        <label for="test-opt">Необов'язкове (:optional):</label>
+        <input type="text" id="test-opt" placeholder="Пунктирна рамка">
+
+        <label for="test-en">Доступне (:enabled):</label>
+        <input type="text" id="test-en" placeholder="Звичайне поле" enabled>
+
+        <label for="test-dis">Заблоковане (:disabled):</label>
+        <input type="text" id="test-dis" placeholder="Не можна редагувати" disabled>
+    </section>
+
+</body>
+</html>
