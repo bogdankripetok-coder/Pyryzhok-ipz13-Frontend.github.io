@@ -29,9 +29,6 @@ q.review::after {
     margin-bottom: 10px;
 }
 
-.site-footer p::before {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange"><path d="M8 0l2.4 5.2L16 6l-4 4.2L13 16l-5-2.8L3 16l1-5.8L0 6l5.6-.8z"/></svg>');
-    margin-right: 8px;
 }
 
 .site-header {
